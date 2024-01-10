@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css
+
+
+
+    ">
+    <script src="Clock.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&family=Poppins:wght@400;500&display=swap');
+        body{
+            min-height: 100vh;
+            background: linear-gradient(45deg,rgb(14, 14, 78),rgb(15, 15, 44));
+           /* display: flex;
+           justify-content: center;
+           align-items: center; */
+           gap: 20px;
+           font-family:'Poppins', sans-serif;
+        }
+        .circles{
+            background:linear-gradient(180deg,white,rgb(255, 59, 196));
+            opacity: 0.9;
+box-shadow: 0px 18px 42px 20px rgba(229, 3, 250, 0.37);
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 15px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+height: 300px;width: 300px;border-radius: 50%;}
+#Clock{
+    height: 100px;width: 100px;
+    border-radius: 8px;
+}
+#container{
+    padding:40px;
+    
+}
+
+.fa-sun {
+    position: absolute;
+    transform: scale(0);
+    transition: 1s ease;
+  
+}
+label{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: gray;
+}
+#moon{
+    position: absolute;
+    font-size: 20px;
+    transition: 1s ease;
+}
+/* input:checked~label{
+background-color: white;
+}
+input:checked~label .fa-moon{
+transform:rotate(360deg) scale(0);
+
+}
+input:checked~label .fa-sun{
+ 
+transform:scale(1) rotate(360deg);
+
+}
+input{
+    position: absolute;
+   
+} */
+@media(max-width:900px){
+#circle2{
+    display: none;
+}
+input{
+    height: 20px;
+    font-size: 12px;
+}
+.circles{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: aqua;
+}
+#Clock{
+    height: 50px;
+    width: 100px;
+    border-radius: 5px;
+}
+
+
+}
+
+
+button{
+    position: absolute;
+    top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0 0 7px 2px grey;
+    background-color: black;
+    color: white;
+
+}
+    </style>
+    
+</head>
+<body>
+    <!-- <a href="buton.html">Hello</a> -->
+    <div id="container" class="contain" style="display: flex;justify-content: center;align-items: center;min-height: 100vh;background: black;">
+        <!-- <input type="checkbox" id="toggleCheckbox">
+        <label for="toggleCheckbox">
+            <i class="fa-solid fa-moon" id="moon"></i>
+
+            <i class="fa-solid fa-sun" id="sun"></i>
+        </label> -->
+        <button onclick="toggleBackgroundColor()" value="click">
+            <i class="fa-solid fa-moon" id="moon"></i>
+           <i class="fa-solid fa-sun" id="sun" >
+          
+            </i>
+
+            
+        </button>
+    <div class="circles"  >
+
+    </div>
+    <div class="circles" id="circle2" style="height: 300px;width: 300px;border-radius: 50%;">
+
+    </div>
+    <div id="Clock" style="background: #ff2121;position: absolute;display: flex;flex-direction: column;justify-content: center;align-items: center;color: wheat;font-weight: bold;">
+
+    </div>
+
+    </div>
+    
+ 
+
+</body>
+</html>
